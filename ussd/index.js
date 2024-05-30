@@ -116,12 +116,11 @@ app.get("/api/test", (req, res) => {
       );
     },
     next: {
-        1: "Health Services",
-        2: "Identification Services",
-        3: "Education Services"
-      },
-    defaultNext: "invalidOption",
-  });
+      1: "Health Services",
+      2: "Identification Services",
+      3: "Education Services"
+    },
+  });  
 
   menu.state("Health Services", {
     run: function () {
