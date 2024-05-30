@@ -142,7 +142,7 @@ app.get("/api/test", (req, res) => {
   menu.state("National Hospital Insurance Fund(NHIF)", {
     run: function () {
       menu.con(
-        "Choose a Service:" +
+        "Rate the Service Offered:" +
           "\n1. Register & Add Dependants" +
           "\n2. Pay Contributions And Penalities" +
           "\n3. Change My Hospital"
@@ -156,22 +156,45 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
-  menu.state("Register & Add Dependant", {
+  menu.state("Register & Add Dependants", {
     run: function () {
       menu.con(
-        "Choose a Service:" +
-          "\n1. Register & Add Dependants" +
-          "\n2. Pay Contributions And Penalities" +
-          "\n3. Change My Hospital"
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
       );
     },
     next: {
-      1: "Register & Add Dependants",
-      2: "Pay Contributions And Penalities",
-      3: "Change My Hospital",
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
     },
     defaultNext: "invalidOption",
   });
+
+  menu.state("Very Poor", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state('Very Poor.comment', {
+    run: () => {
+        menu.end('Thankyou for your feedback');
+    }
+});
 
 
   app.post("/ussd", function (req, res) {
