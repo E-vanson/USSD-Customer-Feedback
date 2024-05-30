@@ -287,6 +287,178 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
+  menu.state("Civil Registration Services", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. Issuance of Birth Certificate" +
+          "\n2. Issuance of Death Certificate" 
+      );
+    },
+    next: {
+      1: "Issuance of Birth Certificate",
+      2: "Issuance of Death Certificate"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Higher Education Loans Board(HELB)", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. Student Loan Application" +
+          "\n2. HELB Compliance Certificate" 
+      );
+    },
+    next: {
+      1: "Student Loan Application",
+      2: "HELB Compliance Certificate"
+    },
+    defaultNext: "invalidOption",
+  });
+  
+  menu.state("National Registration Bureau", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. Issuance of Initial Identity Card" +
+          "\n2. Issuance of Duplicate Identity Card" 
+      );
+    },
+    next: {
+      1: "Issuance of Initial Identity Card",
+      2: "Issuance of Duplicate Identity Card"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Issuance of Birth Certificate", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Issuance of Death Certificate", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Student Loan Application", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("HELB Compliance Certificate", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Issuance of Initial Identity Card", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Issuance of Duplicate Identity Card", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  
   menu.state("Body Mass Index", {
     run: function () {
       menu.con(
