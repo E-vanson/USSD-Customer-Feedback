@@ -177,6 +177,44 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
+  menu.state("National Aids Control Council)", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. HIV Awareness Education" +
+          "\n2. HIV Post councelling" +
+          "\n3. Referalls for HIV Positives"
+      );
+    },
+    next: {
+      1: "HIV Awareness Education",
+      2: "HIV Post councelling",
+      3: "Referalls for HIV Positives",
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("HIV Awareness Education", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
   menu.state("Very Poor", {
     run: function () {
       menu.con(
