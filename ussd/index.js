@@ -177,7 +177,7 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
-  menu.state("National Aids Control Council)", {
+  menu.state("National Aids Control Council", {
     run: function () {
       menu.con(
         "Rate the Service Offered:" +
@@ -215,7 +215,101 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
+  menu.state("HIV Post Councelling", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+    menu.state("Referalls for HIV Positives", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
   menu.state("Very Poor", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Poor", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Good", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Very Good", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Excellent", {
     run: function () {
       menu.con(
         "Leave us a comment (optional):" 
