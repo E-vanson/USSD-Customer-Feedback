@@ -43,13 +43,13 @@ app.get("/api/test", (req, res) => {
       menu.con(
         "Choose a Service:" +
           "\n1. Health Service" +
-          "\n2. Identification Services" +
+          "\n2. Identification Services And Childhood Services" +
           "\n3. Education Services"
       );
     },
     next: {
         1: "Health Services",
-        2: "Identification Services",
+        2: "Identification Services And Childhood Services",
         3: "Education Services"
       },
     defaultNext: "invalidOption",
@@ -60,13 +60,13 @@ app.get("/api/test", (req, res) => {
       menu.con(
         "Choose a Service:" +
           "\n1. Health Service" +
-          "\n2. Identification Services" +
+          "\n2. Identification Services And Childhood Services" +
           "\n3. Education Services"
       );
     },
     next: {
         1: "Health Services",
-        2: "Identification Services",
+        2: "Identification Services And Childhood Services",
         3: "Education Services"
       },
     defaultNext: "invalidOption",
@@ -77,13 +77,13 @@ app.get("/api/test", (req, res) => {
       menu.con(
         "Choose a Service:" +
           "\n1. Health Service" +
-          "\n2. Identification Services" +
+          "\n2. Identification Services And Childhood Services" +
           "\n3. Education Services"
       );
     },
     next: {
         1: "Health Services",
-        2: "Identification Services",
+        2: "Identification Services And Childhood Services",
         3: "Education Services"
       },
     defaultNext: "invalidOption",
@@ -94,13 +94,13 @@ app.get("/api/test", (req, res) => {
       menu.con(
         "Choose a Service:" +
           "\n1. Health Service" +
-          "\n2. Identification Services" +
+          "\n2. Identification Services And Childhood Services" +
           "\n3. Education Services"
       );
     },
     next: {
         1: "Health Services",
-        2: "Identification Services",
+        2: "Identification Services And Childhood Services",
         3: "Education Services"
       },
     defaultNext: "invalidOption",
@@ -111,13 +111,13 @@ app.get("/api/test", (req, res) => {
       menu.con(
         "Choose a Service:" +
           "\n1. Health Service" +
-          "\n2. Identification Services" +
+          "\n2. Identification Services And Childhood Services" +
           "\n3. Education Services"
       );
     },
     next: {
       1: "Health Services",
-      2: "Identification Services",
+      2: "Identification Services And Childhood Services",
       3: "Education Services"
     },
   });  
@@ -135,6 +135,40 @@ app.get("/api/test", (req, res) => {
       1: "National Hospital Insurance Fund(NHIF)",
       2: "National Aids Control Council",
       3: "Ministry Of Health",
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Identification Services And Childhood Services", {
+    run: function () {
+      menu.con(
+        "Choose a Service:" +
+          "\n1. Civil Registration Services" +
+          "\n2. Higher Education Loans Board(HELB)" +
+          "\n3. National Registration Bureau"
+      );
+    },
+    next: {
+      1: "Civil Registration Services",
+      2: "Higher Education Loans Board(HELB)",
+      3: "National Registration Bureau",
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Education Services", {
+    run: function () {
+      menu.con(
+        "Choose a Service:" +
+          "\n1. Kenya Universities and Colleges Central Placement Service(KUCCPS)" +
+          "\n2. Ministry of Education-Directorate of Adult and Continuing Education" +
+          "\n3. Kenya Accountants & Secretaries National Examination Board(KASNEB)"
+      );
+    },
+    next: {
+      1: "Kenya Universities and Colleges Central Placement Service(KUCCPS)",
+      2: "Ministry of Education-Directorate of Adult and Continuing Education",
+      3: "Kenya Accountants & Secretaries National Examination Board(KASNEB)",
     },
     defaultNext: "invalidOption",
   });
@@ -177,7 +211,49 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
-  menu.state("National Aids Control Council)", {
+  menu.state("Pay Contributions And Penalities", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Change My Hospital", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("National Aids Control Council", {
     run: function () {
       menu.con(
         "Rate the Service Offered:" +
@@ -194,7 +270,66 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
-  menu.state("HIV Awareness Education", {
+  menu.state("Ministry Of Health", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. Body Mass Index" +
+          "\n2. Counselling and health promotion" +
+          "\n3. Blood Pressure"
+      );
+    },
+    next: {
+      1: "Body Mass Index",
+      2: "Counselling and health promotion",
+      3: "Blood Pressure",
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Body Mass Index", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Counselling and health promotion", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Blood Pressure", {
     run: function () {
       menu.con(
         "Rate Service From 1-5:" +
@@ -216,6 +351,58 @@ app.get("/api/test", (req, res) => {
   });
 
   menu.state("Very Poor", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Poor", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Good", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Very Good", {
+    run: function () {
+      menu.con(
+        "Leave us a comment (optional):" 
+      );
+    },
+    next: {
+        '*[a-zA-Z0-9]+': 'Very Poor.comment'
+    },
+    // If the user doesn't input anything, also proceed to the end state
+    defaultNext: "Very Poor.comment"
+  });
+
+  menu.state("Excellent", {
     run: function () {
       menu.con(
         "Leave us a comment (optional):" 
