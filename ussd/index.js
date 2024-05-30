@@ -173,6 +173,158 @@ app.get("/api/test", (req, res) => {
     defaultNext: "invalidOption",
   });
 
+  menu.state("Kenya Universities and Colleges Central Placement Service(KUCCPS)", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. Placement to universities and colleges" +
+          "\n2. Career Guidance" 
+      );
+    },
+    next: {
+      1: "Placement to universities and colleges",
+      2: "Career Guidance",
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Placement to universities and colleges", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Career Guidance", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+  menu.state("Ministry of Education-Directorate of Adult and Continuing Education", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. Registration Of Candidates" 
+
+      );
+    },
+    next: {
+      1: "Registration Of Candidates",
+
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Registration Of Candidates", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Kenya Accountants & Secretaries National Examination Board(KASNEB)", {
+    run: function () {
+      menu.con(
+        "Rate the Service Offered:" +
+          "\n1. Examination Booking" +
+          "\n2. Application for A student Id" 
+      );
+    },
+    next: {
+      1: "Examination Booking",
+      2: "Application for A student Id",
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Examination Booking", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+  menu.state("Application for A student Id", {
+    run: function () {
+      menu.con(
+        "Rate Service From 1-5:" +
+        "\n1. Very Poor" +
+        "\n2. Poor" +
+        "\n3. Good" +
+        "\n4. Very Good" +
+        "\n5. Excellent" 
+      );
+    },
+    next: {
+      1: "Very Poor",
+      2: "Poor",
+      3: "Good",
+      4: "Very Good",
+      5: "Excellent"
+    },
+    defaultNext: "invalidOption",
+  });
+
+
+
+
   menu.state("National Hospital Insurance Fund(NHIF)", {
     run: function () {
       menu.con(
